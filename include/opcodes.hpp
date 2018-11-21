@@ -11,8 +11,8 @@ class opcode {
         using lfunc = std::function<void(U8 A, U8 F, U8 B, U8 C, U8 D, U8 E, U8 H, U8 L, U8 n8, U16 n16)>;
 
     public:
-        public: opcode_t(U16 o, std::string mn, std::string ss, U8 c, U8 l, U8 f[8], std::function)
-        : _opcode(o), mnemonic(mn), subset(ss), cycles(c), length(l), flags(f) {}
+        public: opcode_t(U16 o, std::string mn, std::string ss, U8 c, U8 l, U8 f[8], lfunc func)
+        : _opcode(o), mnemonic(mn), subset(ss), cycles(c), length(l), flags(f), _function(func) {}
         
         virtual ~opcode() {}
 
