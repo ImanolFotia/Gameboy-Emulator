@@ -14,3 +14,6 @@ Simply run **make** in the root folder, if you are using Windows you may want to
 
 ### TODO
 * Finish opcodes implementation (16/256)
+
+## License
+This software is distributed under MIT License
