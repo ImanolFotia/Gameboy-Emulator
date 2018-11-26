@@ -1,14 +1,21 @@
 #pragma once
 
-#define U8 uint8_t
-#define U16 uint16_t
-#define U32 uint32_t
-#define U64 uint64_t
-#define U0 void
-#define BOOL bool
+typedef uint8_t U8;
+typedef uint16_t U16;
+typedef uint32_t U32;
+typedef uint64_t U64;
+typedef void U0;
+typedef bool BOOL;
 
-template<typename T, typename c = 8, typename b = 1>
+template<typename T, int b = 1>
 class bit_field {
-    T fields[c] : b;
+    T fielda : b;
+    T fieldb : b;
+    T fieldc : b;
+    T fieldd : b;
+    T fielde : b;
+    T fieldf : b;
+    T fieldg : b;
+    T fieldh : b;
 };
 

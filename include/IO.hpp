@@ -59,7 +59,7 @@ class IO {
         bit_field<U8> NR_51; // selection of sound output terminal
         bit_field<U8> NR_52; // sound Mode on/off
         
-        bit_field<U8, 32, 4> WP_RAM; // Waveform storage for arbitrary sound data
+        bit_field<U8, 4> WP_RAM[4]; // Waveform storage for arbitrary sound data
         bit_field<U8> LCDC; //LCD control
         bit_field<U8> STAT; //LCDC status
         U8 SCY; //Scroll Y

@@ -14,7 +14,7 @@ class cpu
 {
     public:
 
-    cpu() = default;
+    cpu();
     ~cpu() = default;
 
     U0 Init();
@@ -25,7 +25,7 @@ class cpu
 
     private:
         std::map<U16, opcode> Instructions;
-        
+        s
         enum flags {
             Z = 0, //?Zero flag
             N,     //?Substract flag
@@ -36,14 +36,25 @@ class cpu
             not_used2, //?Always Zero
             not_used3, //?Always Zero
 
-        }
+        };
+
+        enum flag_status 
+        {
+            NOT_CHANGE = 0x00,
+            CHANGE,
+            SET_ZERO,
+            SET_ONE,
+            DEFAULT
+        };
+
+        bit_field<U8, 2> flag; 
 
         //  Registers
         //? These registers can be used as 16 bit registers by pairing them up
-        U8      A, F, //Can be used as 16-bit register AF
-                B, C, //Can be used as 16-bit register BC
-                D, E, //Can be used as 16-bit register DE
-                H, L; //Can be used as 16-bit register HL
+        U8      rA, rF, //Can be used as 16-bit register AF
+                rB, rC, //Can be used as 16-bit register BC
+                rD, rE, //Can be used as 16-bit register DE
+                rH, rL; //Can be used as 16-bit register HL
 
         U16 PC; // Program Counter
         U16 SP; // Stack Pointer
