@@ -17,3 +17,5 @@ Simply run **make** in the root folder, if you are using Windows you may want to
 
 ## License
 This software is distributed under MIT License
+
+### **Imanol Fotia - 2018**
